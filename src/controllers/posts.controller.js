@@ -63,7 +63,7 @@ const eliminaPost = async (req, res) => {
         }
 
         // res.status(204).json(result.rows);
-        res.sendStatus(204);
+        res.json(result.rows[0]);
 
    } catch (error) {
         res.status(500).json({ error: error.message });
